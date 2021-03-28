@@ -111,10 +111,14 @@
            <li id="home-top-menu" class="pull-<%= isRtl ? "right":"left"%>   <%= currentPage.endsWith("/home.jsp")? 
         		   "active" : "" %>"><a href="<%= request.getContextPath() %>/"><fmt:message key="jsp.layout.navbar-default.home"/></a></li>
 		  <% if(showCommList){ %>
-		   <li id="communitylist-top-menu" class="<%= currentPage.endsWith("/community-list")? 
+		   <li id="help-top-menu" class="<%= currentPage.endsWith("/community-list")? 
         		   "active" : "" %>"><a href="<%= request.getContextPath() %>/community-list"><fmt:message key="jsp.layout.navbar-default.communities-collections"/></a></li>
-        		 <% }%> 
-           <% for (String mlink : mlinks) { %>
+        		 <% }%>
+	<li id="help-top-menu"><a href="http://34.122.162.228:8080/jspui/submit"><fmt:message key="jsp.layout.navbar-default.create-history"/></a></li>
+	<li id="help-top-menu"><a href="http://34.122.162.228:8080/jspui/cris/administrator/rp/index.htm"><fmt:message key="jsp.layout.navbar-default.create-people"/></a></li>
+	<li id="help-top-menu"><a href="http://34.122.162.228:8080/jspui/cris/administrator/project/index.htm"><fmt:message key="jsp.layout.navbar-default.create-project"/></a></li> 
+	<li id="help-top-menu"><a href="http://34.122.162.228:8080/jspui/cris/administrator/ou/index.htm"><fmt:message key="jsp.layout.navbar-default.create-organization"/></a></li> 
+         <%--  <% for (String mlink : mlinks) { %>
            <c:set var="exploremlink">
            <%= mlink.trim() %>
            </c:set>
@@ -125,7 +129,7 @@
            <% } %>
            <li class="dropdown hidden-md hidden-lg">
              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><fmt:message key="jsp.layout.navbar-default.explore"/> <b class="caret"></b></a>
-             <ul class="dropdown-menu">
+     	  <%-- <ul class="dropdown-menu">
            <% for (String mlink : mlinks) { %>
            <c:set var="exploremlink">
            <%= mlink.trim() %>
@@ -136,7 +140,7 @@
            <li class="<c:if test="${exploremlink == location}">active</c:if>"><a href="<%= request.getContextPath() %>/cris/explore/<%= mlink.trim() %>"><fmt:message key="${fmtkey}"/></a></li>
            <% } %>
            </ul>
-           </li>
+           </li> --%>
  <%
  if (extraNavbarData != null)
  {
@@ -177,7 +181,7 @@
  <%
    }
  %>
- --%>
+--%>
        <div class="nav navbar-nav navbar-<%= isRtl ? "left" : "right" %>">
 		<ul class="nav navbar-nav navbar-<%= isRtl ? "left" : "right" %>">
                     <li id="search-top-menu" class="dropdown" onmouseover="hover(this);" onmouseout="out(this);">
