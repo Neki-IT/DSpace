@@ -1,0 +1,10 @@
+DSpace CRIS - Museu da Pessoa
+=======================
+
+Todas as mudanças feitas para a Sprint-1 até Março estão nesse repositório.
+
+O Dev que clonar este projeto deve seguir os passos do Polarion do Museu da Pessoa, menos as etapas referentes ao banco. 
+
+O banco deve ser criado utilizando este dump da pasta "banco".
+
+Check the Wiki: https://wiki.duraspace.org/display/DSPACECRIS/DSpace-CRIS+Home
