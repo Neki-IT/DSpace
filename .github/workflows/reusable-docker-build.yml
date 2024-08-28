@@ -195,7 +195,7 @@ jobs:
   # (e.g. AMD64 and ARM64 should be listed as options under the same tagged Docker image)
   docker-build_manifest:
     if: ${{ github.event_name != 'pull_request' }}
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, acervos]
     needs:
       - docker-build
     steps:
