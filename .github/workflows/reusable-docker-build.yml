@@ -240,7 +240,7 @@ jobs:
   docker-build_manifest:
     # Only run if this is NOT a PR
     if: ${{ github.event_name != 'pull_request' }}
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, acervos]
     needs:
       - docker-build
     steps:
@@ -290,7 +290,7 @@ jobs:
   docker-copy_to_dockerhub:
     # Only run if this is NOT a PR
     if: ${{ github.event_name != 'pull_request' }}
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, acervos]
     needs:
       - docker-build_manifest
 

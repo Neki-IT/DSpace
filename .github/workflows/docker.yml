@@ -156,7 +156,7 @@ jobs:
   docker-deploy:
     # Ensure this job never runs on forked repos. It's only executed for 'dspace/dspace'
     if: github.repository == 'dspace/dspace'
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, acervos]
     # Must run after all major images are built
     needs: [dspace, dspace-test, dspace-cli, dspace-postgres-pgcrypto, dspace-solr]
     env:
